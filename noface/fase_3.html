@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Fase 3</title>
-
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
 
     <h2>Você está na Fase 3, esta é a ultima fase!</h2>
 
-    <h3>CHIHIRO</h3>
+    <h3>No Face</h3>
 
     <p>
-      Fiz um amigo e ele vai me ajudar a sair desse mundo, mas para isso nao
-      posso esquecer meu verdadeiro nome.
+      Parabéns por ter me ajudado. Você quer receber uma recompensa pelo alimento que vc me forneceu?
       <br />
-
-      Qual é meu nome?
     </p>
 
-    <a onclick="resposta1()" href="#">Responder</a>
+    <a onclick="resposta()" href="#">Responder</a>
 
     <script>
-      function resposta1() {
-        resposta = prompt("Qual é meu nome?");
+      function resposta() {
+        resposta = prompt("Digite \"S\" para Sim ou \"N\" para Não");
 
         resposta = resposta.toLowerCase()
 
-        if (resposta == "chihiro") {
-          window.location.assign("win.html");
-        } else {
+        if (resposta == "s") {
           window.location.assign("gameover.html");
+        } else {
+          window.location.assign("win.html");
         }
       }
     </script>

@@ -1,0 +1,10 @@
+.botao-verde, a{
+    background-color: rgb(31, 143, 8);
+    padding: 8px 42px;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+  }
