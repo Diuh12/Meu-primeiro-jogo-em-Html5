@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3</title>
+</head>
+<body>
+    <h1>Fase 3</h1>
+
+    <h1>CHIHIRO</h1>
+    <h2>Estou perdida no mundo espiritual e preciso sair daqui antes  que a feiticeira Yubaba me capture.</h2> 
+        <p> Para não ser capturada preciso de um emprego, assim consigo planejar minha fuga sem levantar suspeitas.
+        <br>Mas ninguém me ajuda, a unica solução é trabalhar na Casa de banho da própria fenticeira, assim ela me deixará em paz. Não sei o que fazer, preciso da sua ajuda.
+        
+    </p>
+    <p>O que devo fazer? <br>Coloque a opção que devo seguir para conseguir sair daqui</p>
+    <h3>(A) Trabalhar para a fenticeira é muito arriscado, é melhor não.</h3>
+    <h3>(B) Sim, trabalhe! Você precisa trabalhar para ela se quiser fugir desse mundo.</h3>
+    <h3>(C) Você pode desistir e ser capturada por ela.</h3>
+
+    <a onclick="resposta1()" href="#">Responder</a>
+
+    <script>
+        function resposta1() {
+        resposta = prompt("Alternativa: a, b ou c?")
+        
+        while (resposta != 'a' && resposta != 'b' && resposta != 'c') {
+            alert('opção invalida')
+            resposta = prompt("Alternativa: a, b ou c?");
+        }
+
+        if (resposta == 'b') {
+            window.location.assign('win.html')
+        }else{
+            window.location.assign('gameover.html')
+        }
+    }
+
+    </script>
+</body>
+</html>
