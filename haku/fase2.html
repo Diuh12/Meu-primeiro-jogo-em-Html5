@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fase 2</title>
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <span> Haku </span>
+        <span> Fase 2 </span>
+      </nav>
+      <main>
+    <p>
+      No mundo espiritual ele roubou o lacre mágico (a pedra valiosa) e foi amaldiçoado por isso.</p>
+
+      <h3>O que Haku precisa fazer para quebrar a maldição?</h3>
+      
+      <ul>
+    <ol>(A) Não tem o que fazer, pois ele já roubou o lacre mágico há muito tempo</ol>
+    <ol>(B) Pegar o lacre e devolver para a sua verdadeira dona</ol>
+
+  </ul>
+</main>
+
+<a class="botaoresponder" a onclick="resposta()" onclick="inicio()" href="#">Responder</a>
+</div>
+    
+    <script>
+        function resposta() {
+          resposta = prompt("Escolha a alternativa correta: \"a\" ou \"b\" ");
+  
+          resposta = resposta.toLowerCase()
+  
+          if (resposta == "b") {
+            window.location.assign("fase3.html");
+          } else{
+            window.location.assign("../gameover.html"); // fase2.html?
+          }
+        }
+      </script>
+  </body>
+</html>

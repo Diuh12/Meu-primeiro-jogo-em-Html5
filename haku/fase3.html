@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fase 3</title>
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <span> Haku </span>
+        <span> Fase 3 </span>
+      </nav>
+      <main>
+        <p>
+          Haku há muito tempo trocou seu próprio nome por um emprego, por isso
+          ele não se lembrava mais de seu verdadeiro nome.
+        </p>
+        <p>
+          Graças a uma lembrança de sua amiga Chihiro, ele consegue lembrar do
+          próprio nome e se liberta dos serviços da feiticeira Yubaba, seu
+          verdadeiro nome é Cohaku.
+        </p>
+
+        <h3>Por que Haku não lembrava do seu próprio passado?</h3>
+        <ul>
+          <ol>
+            (A) Ele tinha esquecido devido à alteração do nome e da maldição que
+            Yubaba colocou sobre ele.
+          </ol>
+          <br>
+          <ol>
+            (B) Quando ele entrou no mundo dos espíritos ele aos poucos começou
+            a esquecer de seu passado.
+          </ol>
+        </ul>
+      </main>
+
+      <section class="boteos-resposta"> 
+      <a href="../win.html">Alternativa A</a>
+      <a href="../gameover.html">Alternativa B</a>
+    </section>
+    </div>
+
+    <script>
+      function inicio() {
+        contachances = 2;
+
+        while (contachances > 0) {
+          if (resposta() == true) {
+            return window.location.assign("win.html");
+          }
+
+          contachances--;
+          if (contachances > 0) {
+            alert("Você tem mais " + contachances);
+          }
+        }
+
+        window.location.assign("../gameover.html");
+      }
+
+      function validaOpcoes() {
+        resposta = prompt("Alternativa: a ou b?");
+        while (resposta != "a" && resposta != "b") {
+          alert("opção invalida");
+          resposta = prompt("Alternativa: a ou b?");
+        }
+        return resposta;
+      }
+
+      function resposta() {
+        validaOpcoes();
+
+        if (resposta == "a") {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
