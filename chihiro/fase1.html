@@ -1,44 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Fase 1</title>
+
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div class="container">
+      <nav>
+        <span> Chihiro </span>
+        <span> Fase 1 </span>
+      </nav>
       <main>
-      <h2>Você está na Fase 1</h2>
+        <h3>
+          Estou perdida no mundo espiritual e preciso sair daqui antes que a
+          feiticeira Yubaba me capture!
+        </h3>
+        <p>
+          Para não ser capturada preciso de um emprego, assim consigo planejar
+          minha fuga sem levantar suspeitas.
+        </p>
+        <p>
+          Mas ninguém me ajuda, a unica solução é trabalhar na Casa de banho da
+          própria feiticeira, assim ela me deixará em paz. Não sei o que fazer.
+        </p>
+        <p>Responda com a opção que vai ajudar Chihiro:</p>
 
-      <h3>CHIHIRO</h3>
-
-      <h2>
-        Estou perdida no mundo espiritual e preciso sair daqui antes que a
-        feiticeira Yubaba me capture.
-      </h2>
-      <p>
-        Para não ser capturada preciso de um emprego, assim consigo planejar
-        minha fuga sem levantar suspeitas. <br />Mas ninguém me ajuda, a unica
-        solução é trabalhar na Casa de banho da própria feiticeira, assim ela me
-        deixará em paz.
-      </p>
-      <p>
-        Não sei o que fazer, preciso da sua ajuda. <br />Responda com a opção
-        que vai me ajudar:
-      </p>
-      <h4>(A) Trabalhar para a feiticeira é muito arriscado, é melhor não.</h4>
-      <h4>
-        (B) Sim, trabalhe! Você precisa trabalhar para ela se quiser fugir desse
-        mundo.
-      </h4>
-      <h4>(C) Você pode desistir e ser capturada por ela.</h4>
-    </main>
-
-      <a onclick="resposta1()" href="#">Responder</a>
+        <ul>
+          <ol>
+            (A) Trabalhar para a feiticeira é muito arriscado, é melhor não.
+          </ol>
+          <ol>
+            (B) Sim, trabalhe! Você precisa trabalhar para ela se quiser fugir
+            desse mundo.
+          </ol>
+          <ol>
+            (C) Você pode desistir e ser capturada por ela.
+          </ol>
+        </ul>
+      </main>
+      <a class="botaoresponder" onclick="inicio()" href="#">Responder</a>
     </div>
 
     <script>
+      function inicio() {
+        contachances = 3;
+
+        while (contachances > 0) {
+          validaOpcoes();
+
+          if (resposta == "b") {
+            return window.location.assign("fase2.html");
+          } 
+
+          contachances--;
+          if (contachances > 0) {
+            alert("Você tem mais " + contachances);
+          }
+        }
+
+        return window.location.assign("../gameover.html");
+      }
+
       function validaOpcoes() {
         resposta = prompt("Alternativa: a, b ou c?");
         while (resposta != "a" && resposta != "b" && resposta != "c") {
@@ -46,16 +73,6 @@
           resposta = prompt("Alternativa: a, b ou c?");
         }
         return resposta;
-      }
-
-      function resposta1() {
-        validaOpcoes();
-
-        if (resposta == "b") {
-          window.location.assign("fase2.html");
-        } else {
-          window.location.assign("../gameover.html");
-        }
       }
     </script>
   </body>
